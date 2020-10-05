@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <todo-list v-bind:todos="todos"></todo-list>
-    <create-todo v-on:add-todo="addTodo"></create-todo>
+  <div id="app">
+    <h1 class="ui dividing centered header">Vue.js Todo App</h1>
+    <div class='ui three column centered grid'>
+      <div class='column'>
+        <todo-list v-bind:todos="todos"></todo-list>
+        <create-todo v-on:create-todo="createTodo"></create-todo>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,7 +16,7 @@ import CreateTodo from './components/CreateTodo'
 import sweetalert from 'sweetalert'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     TodoList,
     CreateTodo
