@@ -25,8 +25,7 @@ export default {
         confirmButtonColor: '#DD6B55',
         confirmButtonText: 'Yes, delete it!',
         closeOnConfirm: false
-      },
-      () => {
+      }).then(() => {
         const todoIndex = this.todos.indexOf(todo)
         this.todos.splice(todoIndex, 1)
         sweetalert('Deleted!', 'Your To-Do has been deleted.', 'success')
